@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d68019c20dc0e347b31938fd5e96c94, type: 3}
+  m_Name: PopulationPool
+  m_EditorClassIdentifier: Assembly-CSharp::PopulationPool
+  decoyPrefabs:
+  - prefab: {fileID: 6265543499500284526, guid: 9e55cd97681f36f49992cc3ce6fcd3a3, type: 3}
+    weight: 2
+  - prefab: {fileID: 7818239239791481221, guid: 42811815db12ea441a3a3f92e445aea2, type: 3}
+    weight: 5
+  targetPrefab: {fileID: 6507320658644494510, guid: 3b81b6a4e487b464f9d6524653945ac6, type: 3}
