@@ -486,7 +486,7 @@ ModelImporter:
     - name: Clavicle_L
       parentName: Spine_03
       position: {x: -0.058011997, y: -0.041914, z: -0.074471995}
-      rotation: {x: -0.511194, y: 0.6077879, z: -0.46792084, w: -0.3877173}
+      rotation: {x: 0.5476817, y: -0.6067799, z: 0.4178686, w: 0.39654619}
       scale: {x: 1, y: 1, z: 1}
     - name: Shoulder_L
       parentName: Clavicle_L
@@ -496,12 +496,12 @@ ModelImporter:
     - name: Elbow_L
       parentName: Shoulder_L
       position: {x: -0.339474, y: -0.0014489999, z: -0.001436}
-      rotation: {x: -0.0043509, y: 0.031705055, z: -0.0023303512, w: 0.9994851}
+      rotation: {x: -0.0075744325, y: 0.042956725, z: -0.17348297, w: 0.98387045}
       scale: {x: 1, y: 1, z: 1}
     - name: Hand_L
       parentName: Elbow_L
       position: {x: -0.271145, y: 0, z: -0.000381}
-      rotation: {x: -0.09484675, y: 0.30349252, z: -0.12828575, w: 0.9393823}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Finger_01
       parentName: Hand_L
@@ -526,7 +526,7 @@ ModelImporter:
     - name: IndexFinger_01
       parentName: Hand_L
       position: {x: -0.103966, y: 0.003987, z: 0.026726}
-      rotation: {x: -0.076751225, y: -0.20249425, z: 0.059326954, w: 0.9744669}
+      rotation: {x: -0.0767512, y: -0.20249425, z: 0.05932693, w: 0.9744669}
       scale: {x: 1, y: 1, z: 1}
     - name: IndexFinger_02
       parentName: IndexFinger_01
@@ -551,7 +551,7 @@ ModelImporter:
     - name: Thumb_02
       parentName: Thumb_01
       position: {x: -0.063702, y: 0, z: 0}
-      rotation: {x: -0.023975754, y: -0.038225994, z: -0.0032350924, w: 0.9989763}
+      rotation: {x: -0.023975631, y: -0.038225994, z: -0.003235077, w: 0.9989763}
       scale: {x: 1, y: 1, z: 1}
     - name: Thumb_03
       parentName: Thumb_02
@@ -661,7 +661,7 @@ ModelImporter:
     - name: UpperLeg_L
       parentName: Hips
       position: {x: 0.041158, y: -0.026921, z: 0.09896699}
-      rotation: {x: -0.69580317, y: -0.07618407, z: -0.031820837, w: 0.71347135}
+      rotation: {x: -0.69580317, y: -0.07618408, z: -0.031820837, w: 0.7134714}
       scale: {x: 1, y: 1, z: 1}
     - name: LowerLeg_L
       parentName: UpperLeg_L

@@ -10,6 +10,8 @@ public class InputManager : MonoBehaviour
     protected InputAction click;
     protected InputAction pause;
     protected Rigidbody rb;
+    [SerializeField]
+    private bool isGrounded;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
