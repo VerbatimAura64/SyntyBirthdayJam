@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -6,33 +7,63 @@ public class GameManager : MonoBehaviour
     public bool isPaused = false;
     public bool isGameOver;
     public GameObject currZone;
-    public GameObject nextZone;
+    //public GameObject nextZone;
     public ZoneMarker[] zones;
     public bool[] unlocked;
     public GameObject pauseScreen;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
+        unlocked = new bool[zones.Length];
+        pauseScreen.SetActive(false);
+        CheckZoneUnlock();
+        
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        CheckZoneUnlock();
+        IsGameOver();
     }
 
     void CheckZoneUnlock()
     {
-        for (int i = 0; i < zones.Length; i++)
+        if (currZone == null)
         {
-            if (currZone.GetComponent<ZoneMarker>().resolved) 
-            { 
-                currZone = zones[i+1].gameObject;
-                //nextZone = 
-            }
-
+            currZone = zones[0].gameObject;
         }
+        
+            for (int i = 0; i < zones.Length; i++)
+            {
+                if (zones[i].resolved)
+                {
+                    if (i +1 >= zones.Length)
+                        currZone = zones[i].gameObject;
+                    else
+                        currZone = zones[i + 1].gameObject;
+                    unlocked[i] = true;
+                    
+                }
+            }
+        
+    }
+
+    void IsGameOver()
+    {
+        //If all zones unlocked, game is over
+        //for (int i = 0; i < unlocked.Length; i++)
+        //{
+        isGameOver = unlocked.All(unlocked => true);
+            
+                //isGameOver = true;
+            
+                
+             
+                
+        //}
     }
 
     public void PauseGame()

@@ -11,7 +11,8 @@ public class ZoneMarker : MonoBehaviour
     public StoryFragment fragment;
 
     [HideInInspector] public List<GameObject> spawnedInstances = new();
-    [HideInInspector] public bool resolved;
+    //[HideInInspector] 
+    public bool resolved;
 
     public void OnTargetFound()
     {
