@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PopulationPool
   decoyPrefabs:
   - prefab: {fileID: 6265543499500284526, guid: 9e55cd97681f36f49992cc3ce6fcd3a3, type: 3}
-    weight: 2
+    weight: 4
   - prefab: {fileID: 7818239239791481221, guid: 42811815db12ea441a3a3f92e445aea2, type: 3}
     weight: 5
+  - prefab: {fileID: 6507320658644494510, guid: 3b81b6a4e487b464f9d6524653945ac6, type: 3}
+    weight: 2
   targetPrefab: {fileID: 6507320658644494510, guid: 3b81b6a4e487b464f9d6524653945ac6, type: 3}

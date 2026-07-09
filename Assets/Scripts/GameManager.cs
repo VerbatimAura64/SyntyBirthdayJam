@@ -4,6 +4,11 @@ public class GameManager : MonoBehaviour
 {
     public GameObject player;
     public bool isPaused = false;
+    public bool isGameOver;
+    public GameObject currZone;
+    public GameObject nextZone;
+    public ZoneMarker[] zones;
+    public bool[] unlocked;
     public GameObject pauseScreen;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,7 +22,18 @@ public class GameManager : MonoBehaviour
         
     }
 
-    
+    void CheckZoneUnlock()
+    {
+        for (int i = 0; i < zones.Length; i++)
+        {
+            if (currZone.GetComponent<ZoneMarker>().resolved) 
+            { 
+                currZone = zones[i+1].gameObject;
+                //nextZone = 
+            }
+
+        }
+    }
 
     public void PauseGame()
     {

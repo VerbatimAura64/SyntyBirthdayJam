@@ -51,34 +51,40 @@ public class InputManager : MonoBehaviour
 
     void Movement()
     {
-        float time = Mathf.PingPong(Time.time, 1);
-        Vector2 moveValue = movement.ReadValue<Vector2>();
-        if (moveValue != Vector2.zero)
+        if (!gm.isPaused)
         {
-            //Debug.Log("Moving: " + moveValue);
-            rb.MovePosition(rb.position + new Vector3(moveValue.x, 0, moveValue.y) * time);
+            float time = Mathf.PingPong(Time.time, 1);
+            Vector2 moveValue = movement.ReadValue<Vector2>();
+            if (moveValue != Vector2.zero)
+            {
+                //Debug.Log("Moving: " + moveValue);
+                rb.MovePosition(rb.position + new Vector3(moveValue.x, 0, moveValue.y) * time);
+            }
         }
     }
 
     void Interact()
     {
-        Vector2 mousePos = Mouse.current.position.ReadValue();
-        //Debug.Log("Mouse Position: " + mousePos);
-        if (click.WasPerformedThisFrame())
+        if (!gm.isPaused)
         {
-            
-            Ray ray = mainCamera.ScreenPointToRay(mousePos);//Can no longer use Input.mousePosition, need to use InputSystem instead
-            
-            if (Physics.Raycast(ray, out RaycastHit hit, interactRange))
+            Vector2 mousePos = Mouse.current.position.ReadValue();
+            //Debug.Log("Mouse Position: " + mousePos);
+            if (click.WasPerformedThisFrame())
             {
-                Debug.DrawLine(ray.origin, hit.point, Color.red, 1f);
-                Interactable target = hit.collider.GetComponent<Interactable>();
-                if (target != null)
+
+                Ray ray = mainCamera.ScreenPointToRay(mousePos);//Can no longer use Input.mousePosition, need to use InputSystem instead
+
+                if (Physics.Raycast(ray, out RaycastHit hit, interactRange))
                 {
-                    target.ReturnAnswer();
+                    Debug.DrawLine(ray.origin, hit.point, Color.red, 1f);
+                    Interactable target = hit.collider.GetComponent<Interactable>();
+                    if (target != null)
+                    {
+                        target.ReturnAnswer();
+                    }
                 }
+                //Debug.Log("Attack");
             }
-            //Debug.Log("Attack");
         }
     }
 }
