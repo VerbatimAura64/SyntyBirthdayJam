@@ -18,6 +18,9 @@ public class InputManager : MonoBehaviour
     [SerializeField] private float playerSpeed = 5f;
     [SerializeField] private float jumpHeight = 1f;
     [SerializeField] private float gravity = -9.81f;
+    public float rotationX;
+    public float rotationY;
+    public float sensitivity;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -29,11 +32,14 @@ public class InputManager : MonoBehaviour
         movement = InputSystem.actions.FindAction("Move");
         click = InputSystem.actions.FindAction("Attack");
         pause = InputSystem.actions.FindAction("Pause");
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Rotation();
         //isGrounded = cc.isGrounded;
         InputHandle();
     }
@@ -41,6 +47,7 @@ public class InputManager : MonoBehaviour
    void FixedUpdate()
     {
         Movement();
+        //Rotation();
     }
 
     void InputHandle()
@@ -70,21 +77,24 @@ public class InputManager : MonoBehaviour
             float moveX = moveValue.x;
             float moveY = moveValue.y;
             Vector3 move = transform.right * moveX + transform.forward * moveY;
-            cc.Move(move * Time.deltaTime * playerSpeed);
-
             
+            cc.Move(move * Time.deltaTime * playerSpeed);
+            if(moveValue != Vector2.zero)
+                anim.SetBool("isWalking", true);
+            else
+                anim.SetBool("isWalking", false);
+
 
 
 
             //float time = Mathf.PingPong(Time.time, 1);
-            
-            //if (moveValue == Vector2.zero)
+//if (moveValue == Vector2.zero)
             {
-                //anim.SetFloat("isWalking", 0f);
+  //              anim.SetFloat("isWalking", 0f);
             }
-            //else
+    //        else
             {
-                //anim.SetFloat("isWalking", 1f);
+      //          anim.SetFloat("isWalking", 1f);
             }
             
                 //anim.SetFloat("isWalking", moveValue.x);
@@ -92,6 +102,17 @@ public class InputManager : MonoBehaviour
                 //rb.MovePosition(rb.position + new Vector3(moveValue.x, 0, moveValue.y) * time);
             
         }
+    }
+
+
+    void Rotation()
+    {
+        Vector2 mousePos = Mouse.current.delta.ReadValue();
+        rotationX += mousePos.y * -1 * sensitivity;
+        rotationY += mousePos.x  * sensitivity;
+
+        rotationX = Mathf.Clamp(rotationX, -80f, 80f);
+        transform.localEulerAngles = new Vector3 (rotationX, rotationY, 0f);
     }
 
     void Interact()
