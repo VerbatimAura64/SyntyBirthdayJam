@@ -5,11 +5,13 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     public GameManager gm;
+    private FragmentManager fm;
     public Camera mainCamera;
     public float interactRange = 1000f;
     protected InputAction movement;
     protected InputAction click;
     protected InputAction pause;
+    protected InputAction next;
     protected CharacterController cc;
     private Vector3 playerVelocity;
     protected Animator anim;
@@ -26,12 +28,14 @@ public class InputManager : MonoBehaviour
     void Awake()
     {
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        fm = GameObject.FindGameObjectWithTag("GameController").GetComponent<FragmentManager>();
         cc = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         mainCamera = Camera.main;
         movement = InputSystem.actions.FindAction("Move");
         click = InputSystem.actions.FindAction("Attack");
         pause = InputSystem.actions.FindAction("Pause");
+        next = InputSystem.actions.FindAction("Next");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
     }
@@ -54,6 +58,7 @@ public class InputManager : MonoBehaviour
     {
         Pause();
         Interact();
+        Next();
     }
 
     void Pause()
@@ -61,6 +66,17 @@ public class InputManager : MonoBehaviour
         if (pause.WasPerformedThisFrame())
         {
             gm.PauseGame();
+        }
+    }
+
+    void Next()
+    {
+        if (next.WasPerformedThisFrame())
+        {
+            if (fm.panel.activeInHierarchy)
+            {
+                fm.ClosePanel();
+            }
         }
     }
 
@@ -111,8 +127,9 @@ public class InputManager : MonoBehaviour
         rotationX += mousePos.y * -1 * sensitivity;
         rotationY += mousePos.x  * sensitivity;
 
-        rotationX = Mathf.Clamp(rotationX, -80f, 80f);
-        transform.localEulerAngles = new Vector3 (rotationX, rotationY, 0f);
+        rotationX = Mathf.Clamp(rotationX, 15f, 20f);
+        transform.localEulerAngles = new Vector3 (0f, rotationY, 0f);
+        mainCamera.transform.localEulerAngles = new Vector3(rotationX, 0f,0f);
     }
 
     void Interact()

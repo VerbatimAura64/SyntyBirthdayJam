@@ -353,6 +353,17 @@
                 },
                 {
                     "name": "",
+                    "id": "5edbedec-985e-4f6d-9188-05b6bc241bf7",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Next",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f2e9ba44-c423-42a7-ad56-f20975884794",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",

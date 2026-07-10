@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class ZoneMarker : MonoBehaviour
 {
     public PopulationPool pool;
+    //public int spawnPointMax;
     public Transform[] spawnPoints;
     [UnityEngine.Range(0.8f, 1f)] public float camouflageTightness;
     public StoryFragment fragment;
@@ -20,6 +21,7 @@ public class ZoneMarker : MonoBehaviour
         resolved = true;
         FragmentManager.Instance.Unlock(fragment);
     }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 }
 
@@ -29,6 +31,7 @@ public class ZoneMarkerEditor : Editor
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
+        
         ZoneMarker zone = (ZoneMarker)target;
         if (GUILayout.Button("Populate"))
         {
@@ -43,6 +46,7 @@ public class ZoneMarkerEditor : Editor
     {
         ClearObjects(zone);
         int targetIndex = Random.Range(0, zone.spawnPoints.Length);
+        
         for (int i = 0; i < zone.spawnPoints.Length; i++)
         {
             GameObject prefab = (i == targetIndex) 
