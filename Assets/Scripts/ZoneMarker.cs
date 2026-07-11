@@ -2,11 +2,12 @@ using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class ZoneMarker : MonoBehaviour
 {
     public PopulationPool pool;
-    //public int spawnPointMax;
+    public int spawnPointMax;
     public Transform[] spawnPoints;
     [UnityEngine.Range(0.8f, 1f)] public float camouflageTightness;
     public StoryFragment fragment;
@@ -33,6 +34,15 @@ public class ZoneMarkerEditor : Editor
         DrawDefaultInspector();
         
         ZoneMarker zone = (ZoneMarker)target;
+        int spawnNum = zone.spawnPointMax;
+        if (GUILayout.Button("DONT CLICK YET Create Spawns"))
+        {
+            CreateSpawns(zone, spawnNum);
+        }
+        if (GUILayout.Button("DONT CLICK YET Clear Spawns"))
+        {
+            ClearSpawns(zone);
+        }
         if (GUILayout.Button("Populate"))
         {
             SpawnObjects(zone);
@@ -41,6 +51,32 @@ public class ZoneMarkerEditor : Editor
         {
             ClearObjects(zone);
         }
+
+    }
+
+    private void CreateSpawns(ZoneMarker zone, int spawnNum)
+    {
+        ClearSpawns(zone);
+        Vector3 planeSize = new Vector3(25, 0, 25);
+        zone.spawnPoints = new Transform[spawnNum];
+        float randomX = Random.Range(-planeSize.x / 2, planeSize.x / 2);
+        float randomY = Random.Range(-planeSize.y /2, planeSize.y / 2);
+        Vector3 spawnPosition = new Vector3(randomX, 0,  randomY);
+        
+        for (int i = 0; i < spawnNum; i++) { 
+            Transform instance = Instantiate(new GameObject("Spawnpoint").transform);
+            instance.transform.position = spawnPosition;
+            zone.spawnPoints[i] = instance;
+        }
+    }
+
+    private void ClearSpawns(ZoneMarker zone)
+    {
+        foreach(Transform instance in zone.spawnPoints)
+        {
+            if (instance != null) DestroyImmediate(instance.gameObject);
+        }
+        zone.spawnPoints = new Transform[0];
     }
     private void SpawnObjects(ZoneMarker zone)
     {
