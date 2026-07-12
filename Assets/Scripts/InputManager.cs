@@ -93,10 +93,11 @@ public class InputManager : MonoBehaviour
             float moveX = moveValue.x;
             float moveY = moveValue.y;
             Vector3 move = transform.right * moveX + transform.forward * moveY;
-            
+            Debug.Log(moveValue);
             cc.Move(move * Time.deltaTime * playerSpeed);
             if(moveValue != Vector2.zero)
                 anim.SetBool("isWalking", true);
+            
             else
                 anim.SetBool("isWalking", false);
 
@@ -127,7 +128,7 @@ public class InputManager : MonoBehaviour
         rotationX += mousePos.y * -1 * sensitivity;
         rotationY += mousePos.x  * sensitivity;
 
-        rotationX = Mathf.Clamp(rotationX, 15f, 20f);
+        rotationX = Mathf.Clamp(rotationX, 0f, 20f);
         transform.localEulerAngles = new Vector3 (0f, rotationY, 0f);
         mainCamera.transform.localEulerAngles = new Vector3(rotationX, 0f,0f);
     }
@@ -141,7 +142,7 @@ public class InputManager : MonoBehaviour
             if (click.WasPerformedThisFrame())
             {
 
-                Ray ray = mainCamera.ScreenPointToRay(mousePos);//Can no longer use Input.mousePosition, need to use InputSystem instead
+                Ray ray = mainCamera.ScreenPointToRay(mousePos);//RESOLVED: Can no longer use Input.mousePosition, need to use InputSystem instead
 
                 if (Physics.Raycast(ray, out RaycastHit hit, interactRange))
                 {
