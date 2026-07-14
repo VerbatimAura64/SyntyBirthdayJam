@@ -59,15 +59,18 @@ public class ZoneMarkerEditor : Editor
         ClearSpawns(zone);
         Vector3 planeSize = new Vector3(25, 0, 25);
         zone.spawnPoints = new Transform[spawnNum];
-        float randomX = Random.Range(-planeSize.x / 2, planeSize.x / 2);
-        float randomY = Random.Range(-planeSize.y /2, planeSize.y / 2);
-        Vector3 spawnPosition = new Vector3(randomX, 0,  randomY);
+        
         
         for (int i = 0; i < spawnNum; i++) { 
-            Transform instance = Instantiate(new GameObject("Spawnpoint").transform);
-            instance.transform.position = spawnPosition;
+            float randomX = Random.Range(-planeSize.x / 2, planeSize.x / 2);
+            float randomY = Random.Range(-planeSize.z /2, planeSize.z / 2);
+            Vector3 spawnPosition = new Vector3(randomX, 0,  randomY);
+            Transform instance = new GameObject("Spawnpoint").transform;
+            instance.position = spawnPosition;
+            instance.parent = zone.transform;
             zone.spawnPoints[i] = instance;
         }
+        SpawnObjects(zone);
     }
 
     private void ClearSpawns(ZoneMarker zone)
@@ -80,7 +83,7 @@ public class ZoneMarkerEditor : Editor
     }
     private void SpawnObjects(ZoneMarker zone)
     {
-        ClearObjects(zone);
+        //ClearObjects(zone);
         int targetIndex = Random.Range(0, zone.spawnPoints.Length);
         
         for (int i = 0; i < zone.spawnPoints.Length; i++)
