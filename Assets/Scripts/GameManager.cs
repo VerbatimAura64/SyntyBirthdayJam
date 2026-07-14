@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public ZoneMarker[] zones;
     public bool[] unlocked;
     public GameObject pauseScreen;
+    public GameObject zoneTwoDoor;
+    public GameObject zoneThreeDoor;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -36,19 +38,27 @@ public class GameManager : MonoBehaviour
             currZone = zones[0].gameObject;
         }
         
-            for (int i = 0; i < zones.Length; i++)
+        for (int i = 0; i < zones.Length; i++)
+        {
+            if (zones[i].resolved)
             {
-                if (zones[i].resolved)
-                {
-                    if (i +1 >= zones.Length)
-                        currZone = zones[i].gameObject;
-                    else
-                        currZone = zones[i + 1].gameObject;
-                    unlocked[i] = true;
-                    
-                }
+                if (i +1 >= zones.Length)
+                    currZone = zones[i].gameObject;
+                else
+                    currZone = zones[i + 1].gameObject;
+                    unlocked[i] = true;    
             }
-        
+            
+           
+        }
+        if (zones[0].resolved) 
+        {
+            zoneTwoDoor.GetComponent<OpenDoor>().Open();
+        }
+        if (zones[1].resolved)
+        {
+            zoneThreeDoor.GetComponent<OpenDoor>().Open();
+        }
     }
 
     void IsGameOver()
