@@ -12,12 +12,15 @@ public class InputManager : MonoBehaviour
     protected InputAction click;
     protected InputAction pause;
     protected InputAction next;
+    protected InputAction sprint;
     protected CharacterController cc;
     private Vector3 playerVelocity;
     protected Animator anim;
     [SerializeField] private bool isGrounded;
 
     [SerializeField] private float playerSpeed = 5f;
+    [SerializeField] private float sprintMultiplier = 2f;
+    [SerializeField] private float dampTime = 1f;
     [SerializeField] private float jumpHeight = 1f;
     [SerializeField] private float gravity = -9.81f;
     public float rotationX;
@@ -36,6 +39,7 @@ public class InputManager : MonoBehaviour
         click = InputSystem.actions.FindAction("Attack");
         pause = InputSystem.actions.FindAction("Pause");
         next = InputSystem.actions.FindAction("Next");
+        sprint = InputSystem.actions.FindAction("Sprint");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
     }
@@ -94,13 +98,20 @@ public class InputManager : MonoBehaviour
             float moveY = moveValue.y;
             Vector3 move = transform.right * moveX + transform.forward * moveY;
             Debug.Log(moveValue);
-            cc.Move(move * Time.deltaTime * playerSpeed);
-            if(moveValue != Vector2.zero)
+            float currentSpeed = sprint.IsPressed() ? playerSpeed * sprintMultiplier : playerSpeed;
+            cc.Move(move * Time.deltaTime * currentSpeed);
+            //cc.Move(move * Time.deltaTime * playerSpeed);
+            playerVelocity.y += gravity * Time.deltaTime;
+            cc.Move(playerVelocity * Time.deltaTime);
+            anim.SetFloat("walkingY", moveY, dampTime, Time.deltaTime);
+            anim.SetFloat("walkingX", moveX, dampTime, Time.deltaTime);
+            
+            /*if(moveValue != Vector2.zero)
                 anim.SetBool("isWalking", true);
             
             else
                 anim.SetBool("isWalking", false);
-
+            */
 
 
 
@@ -128,7 +139,7 @@ public class InputManager : MonoBehaviour
         rotationX += mousePos.y * -1 * sensitivity;
         rotationY += mousePos.x  * sensitivity;
 
-        rotationX = Mathf.Clamp(rotationX, 0f, 20f);
+        rotationX = Mathf.Clamp(rotationX, 15f, 30f);
         transform.localEulerAngles = new Vector3 (0f, rotationY, 0f);
         mainCamera.transform.localEulerAngles = new Vector3(rotationX, 0f,0f);
     }

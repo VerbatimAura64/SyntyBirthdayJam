@@ -13,10 +13,100 @@ MonoBehaviour:
   m_Name: PopulationPool
   m_EditorClassIdentifier: Assembly-CSharp::PopulationPool
   decoyPrefabs:
-  - prefab: {fileID: 6265543499500284526, guid: 9e55cd97681f36f49992cc3ce6fcd3a3, type: 3}
+  - prefab: {fileID: 1109705922278564, guid: 7851e97aa32f5474f92b61e3e4988c1a, type: 3}
     weight: 4
-  - prefab: {fileID: 7818239239791481221, guid: 42811815db12ea441a3a3f92e445aea2, type: 3}
+  - prefab: {fileID: 1784647339104494, guid: 1aeb5bfabdcdbcd4583e83139d952b1d, type: 3}
     weight: 5
-  - prefab: {fileID: 6507320658644494510, guid: 3b81b6a4e487b464f9d6524653945ac6, type: 3}
+  - prefab: {fileID: 1441525330016004, guid: c0f44381dd01e904c87fad2431087f45, type: 3}
+    weight: 2
+  - prefab: {fileID: 1876184970185692, guid: 83139230f1d12e941a1a4fe3717b6561, type: 3}
+    weight: 2
+  - prefab: {fileID: 1804036296530324, guid: 5082799ad37f92b4bb2aaba2bdb7a5d4, type: 3}
+    weight: 2
+  - prefab: {fileID: 1736729122470676, guid: 6aadac4ba6f145a48863dc87f16916d6, type: 3}
+    weight: 2
+  - prefab: {fileID: 1889313545690738, guid: ad37c0f463d2b0e429d42a12ec7b2469, type: 3}
+    weight: 2
+  - prefab: {fileID: 1018949230691400, guid: d461c345ada76d14f94fe72087cec0f9, type: 3}
+    weight: 2
+  - prefab: {fileID: 6528625661099022346, guid: 6245769b6286a1e458160b66285d83a2, type: 3}
+    weight: 2
+  - prefab: {fileID: 1581182825111960, guid: 5b920fc901e2cd945beaebdb578e5b09, type: 3}
+    weight: 2
+  - prefab: {fileID: 6265543499500284526, guid: 9e55cd97681f36f49992cc3ce6fcd3a3, type: 3}
+    weight: 2
+  - prefab: {fileID: 7818239239791481221, guid: 42811815db12ea441a3a3f92e445aea2, type: 3}
+    weight: 2
+  - prefab: {fileID: 7092519492163846097, guid: 2432909f6709f1740b0c3e562fc17a50, type: 3}
+    weight: 2
+  - prefab: {fileID: 274212577921521990, guid: 41ef685e38fbfdf46a27d2fe0a237dc3, type: 3}
+    weight: 2
+  - prefab: {fileID: 4681667460326336885, guid: d94b2a42b709b0148b2ade390a5c50df, type: 3}
+    weight: 2
+  - prefab: {fileID: 17189799186563761, guid: bc9b3a9556793d34e917f082a7745fff, type: 3}
+    weight: 2
+  - prefab: {fileID: 2014275775643513824, guid: 522732aea26e05740b388458a3bd444e, type: 3}
+    weight: 2
+  - prefab: {fileID: 3739119205476679645, guid: 52a76bb1caa74fc418d21152a8ed60d2, type: 3}
+    weight: 2
+  - prefab: {fileID: 4627919059584404448, guid: f8d39943da21c694b932d7bb4817026a, type: 3}
+    weight: 2
+  - prefab: {fileID: 3206094246704859920, guid: 3c711ecf6f44fb540af9b9b7ba0342c2, type: 3}
+    weight: 2
+  - prefab: {fileID: 2548546371929889008, guid: a31789b3a27f129428f7bbbea2aa61ce, type: 3}
+    weight: 2
+  - prefab: {fileID: 6528625661099022346, guid: 6245769b6286a1e458160b66285d83a2, type: 3}
+    weight: 2
+  - prefab: {fileID: 1193668209549008694, guid: 8c5955c1556dd0044802085d6e2685b1, type: 3}
+    weight: 2
+  - prefab: {fileID: 3286651041671590322, guid: 422c98b52265ecc488995d201f495466, type: 3}
+    weight: 2
+  - prefab: {fileID: 3898776377921779204, guid: b8f3f585958580f429b29099b40d9884, type: 3}
+    weight: 2
+  - prefab: {fileID: 5265465914950777859, guid: 39e460e712018824ab4cf01e2a847aa9, type: 3}
+    weight: 2
+  - prefab: {fileID: 3525896973154045145, guid: 766544dc57254f34ab6f2eb3f1aad327, type: 3}
+    weight: 2
+  - prefab: {fileID: 7497542262271402650, guid: af080066a01b52448aab135531a5d425, type: 3}
+    weight: 2
+  - prefab: {fileID: 754221384861170517, guid: 783c3c2763248b34b972caad3363867c, type: 3}
+    weight: 2
+  - prefab: {fileID: 4611404166197480059, guid: 1ccc8cc5c213673419c945a4740bd995, type: 3}
+    weight: 2
+  - prefab: {fileID: 6057615055608163073, guid: 8c9de44f3c3099b4f87f21fdf61a8074, type: 3}
+    weight: 2
+  - prefab: {fileID: 976601240214183684, guid: a2e130ff3e211824186bc0071c42c8cd, type: 3}
+    weight: 2
+  - prefab: {fileID: 3049262417662919634, guid: 13b0bc9a7eede294e89a5be0d9794f71, type: 3}
+    weight: 2
+  - prefab: {fileID: 8491909086094295302, guid: 2faa264310a51294dbb5f32fa64b9da3, type: 3}
+    weight: 2
+  - prefab: {fileID: 4528745472823861906, guid: 08d1c76980588f44aa6ba265a6b7374d, type: 3}
+    weight: 2
+  - prefab: {fileID: 6326278975644218761, guid: 04ce09ca007d9c049b28778aed0b7d74, type: 3}
+    weight: 2
+  - prefab: {fileID: 5651805117807503085, guid: 1bede6d22428e42498d71ad2dd0a9828, type: 3}
+    weight: 2
+  - prefab: {fileID: 2338398330056055999, guid: d9112148e45ec074383c28e397119f34, type: 3}
+    weight: 2
+  - prefab: {fileID: 2338398330056055999, guid: d9112148e45ec074383c28e397119f34, type: 3}
+    weight: 2
+  - prefab: {fileID: 7627590837190942472, guid: 155b8fc4fe63cd94289e00a996661dad, type: 3}
+    weight: 2
+  - prefab: {fileID: 3813170729718244817, guid: 384ca07554900bc428ede9cac29e8c63, type: 3}
+    weight: 2
+  - prefab: {fileID: 7704138152661050924, guid: e4e03530469c80c4fb2be41ec63bfb18, type: 3}
+    weight: 2
+  - prefab: {fileID: 2393135986349732626, guid: 85b042cc5ede3b541be13aa259e275c5, type: 3}
+    weight: 2
+  - prefab: {fileID: 2749865161554111298, guid: 5812aa6f506c0b8479ef2b70ecfad43c, type: 3}
+    weight: 2
+  - prefab: {fileID: 9216751903606701437, guid: 12f0e765147988e478ca058dfa83d6f5, type: 3}
+    weight: 2
+  - prefab: {fileID: 8496829954733500074, guid: 870b746e3d6a32c4e961e2497043dda5, type: 3}
+    weight: 2
+  - prefab: {fileID: 6528625661099022346, guid: 6245769b6286a1e458160b66285d83a2, type: 3}
+    weight: 2
+  - prefab: {fileID: 1193668209549008694, guid: 8c5955c1556dd0044802085d6e2685b1, type: 3}
     weight: 2
   targetPrefab: {fileID: 6507320658644494510, guid: 3b81b6a4e487b464f9d6524653945ac6, type: 3}
