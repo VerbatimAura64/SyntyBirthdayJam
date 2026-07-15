@@ -1,10 +1,10 @@
 using System.Linq;
 using UnityEngine;
-
-public class GameManager : MonoBehaviour
+using Harborview.GameTools;
+public class GameManager : MonoBehaviour, IGameState
 {
     public GameObject player;
-    public bool isPaused = false;
+    public bool IsPaused { get; set; } = false;
     public bool isGameOver;
     public GameObject currZone;
     //public GameObject nextZone;
@@ -13,6 +13,22 @@ public class GameManager : MonoBehaviour
     public GameObject pauseScreen;
     public GameObject zoneTwoDoor;
     public GameObject zoneThreeDoor;
+
+
+    public void PauseGame()
+    {
+        if (IsPaused)
+        {
+            IsPaused = false;
+        } else
+        {
+            IsPaused = true;
+        }
+        pauseScreen.SetActive(IsPaused);
+        Time.timeScale = IsPaused ? 0 : 1;
+    }
+    bool IGameState.IsPaused => IsPaused;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -76,16 +92,10 @@ public class GameManager : MonoBehaviour
         //}
     }
 
-    public void PauseGame()
+    
+
+    void IGameState.PauseGame()
     {
-        if (isPaused)
-        {
-            isPaused = false;
-        } else
-        {
-            isPaused = true;
-        }
-        pauseScreen.SetActive(isPaused);
-        Time.timeScale = isPaused ? 0 : 1;
+        PauseGame();
     }
 }

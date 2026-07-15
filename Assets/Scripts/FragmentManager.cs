@@ -1,25 +1,35 @@
 using TMPro;
 using UnityEngine;
+using Harborview.GameTools;
 
-public class FragmentManager : MonoBehaviour
+public class FragmentManager : MonoBehaviour, IFragmentDisplay
 {
-    public static FragmentManager Instance;
-    public GameObject panel;
+    [field: SerializeField] public GameObject Panel { get; set; }
     public TMP_Text fragmentText;
 
     private void Awake()
     {
-        Instance = this;
-        panel.SetActive(false);
+        
+        Panel.SetActive(false);
     }
 
     public void Unlock(StoryFragment fragment)
     {
         //Debug.LogError(fragment.fragmentText);
         fragmentText.text = fragment.fragmentText;
-        panel.SetActive(true);
+        Panel.SetActive(true);
         //show panel or play audio
     }
 
-    public void ClosePanel() => panel.SetActive(false);
+    public void ClosePanel() => Panel.SetActive(false);
+
+    void IFragmentDisplay.Unlock(StoryFragment fragment)
+    {
+        Unlock(fragment);
+    }
+
+    void IFragmentDisplay.ClosePanel()
+    {
+        ClosePanel();
+    }
 }

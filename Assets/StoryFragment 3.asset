@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a263946ec5a9e4e4c8a2387755672265, type: 3}
-  m_Name: StoryFragment
+  m_Name: StoryFragment 3
   m_EditorClassIdentifier: Assembly-CSharp::StoryFragment
   orderIndex: 0
-  fragmentText: You'll never catch all three of us! Especially not the one in the
-    bar! Oh wait.
+  fragmentText: Why are you grabbing me?
   fragmentAudio: {fileID: 0}

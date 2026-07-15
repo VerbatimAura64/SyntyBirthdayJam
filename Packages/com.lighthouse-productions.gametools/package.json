@@ -1,0 +1,19 @@
+{
+	"name": "com.lighthouse-productions.gametools",
+	"displayName":"GameTools",
+	"version": "0.1.0",
+	"unity": "6000.3",
+	"unityRelease": "10f1",
+	"description": "Reusable character controller and editor-based population spawner tools. \n\nFor best results, use this text to summarize: \n\u25AA What the package does \n\u25AA How it can benefit the user \n\nNote: Special formatting characters are supported, including line breaks ('\\n') and bullets ('\\u25AA').",
+	"dependencies": {
+		"com.unity.test-framework": "1.6.0"
+	},
+	"author": {
+		"name": "William Alonzo",
+		"url": "http://www.verbatimaura64.github.io",
+		"email": "walonzo64@outlook.com"
+	},
+	"changelogUrl": "https://example.com/changelog.html",
+	"documentationUrl": "https://example.com/",
+	"licensesUrl": "https://example.com/licensing.html"
+}
