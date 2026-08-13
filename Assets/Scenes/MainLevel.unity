@@ -830,6 +830,10 @@ PrefabInstance:
       value: SM_Prop_Bench_Seat_01 (11)
       objectReference: {fileID: 0}
     - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_LocalPosition.x
       value: 124
       objectReference: {fileID: 0}
@@ -5461,6 +5465,10 @@ PrefabInstance:
       value: SM_Prop_Bench_Seat_01 (9)
       objectReference: {fileID: 0}
     - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_LocalPosition.x
       value: 124
       objectReference: {fileID: 0}
@@ -9947,7 +9955,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 3.4769897}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &268955997
 MonoBehaviour:
@@ -13834,11 +13842,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3435742092176600197, guid: 3b81b6a4e487b464f9d6524653945ac6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.63
+      value: -1.614
       objectReference: {fileID: 0}
     - target: {fileID: 3435742092176600197, guid: 3b81b6a4e487b464f9d6524653945ac6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.568
+      value: -27.716
       objectReference: {fileID: 0}
     - target: {fileID: 3435742092176600197, guid: 3b81b6a4e487b464f9d6524653945ac6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17540,19 +17548,19 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 6881de8fe9be5804dbc35d8c60a40171, type: 2}
     - target: {fileID: 8404750078514931655, guid: 12f0e765147988e478ca058dfa83d6f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -186.236
+      value: -186.235
       objectReference: {fileID: 0}
     - target: {fileID: 8404750078514931655, guid: 12f0e765147988e478ca058dfa83d6f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.63
+      value: -1.614
       objectReference: {fileID: 0}
     - target: {fileID: 8404750078514931655, guid: 12f0e765147988e478ca058dfa83d6f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.618
+      value: -27.715996
       objectReference: {fileID: 0}
     - target: {fileID: 8404750078514931655, guid: 12f0e765147988e478ca058dfa83d6f5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.033191714
+      value: -0.033111203
       objectReference: {fileID: 0}
     - target: {fileID: 8404750078514931655, guid: 12f0e765147988e478ca058dfa83d6f5, type: 3}
       propertyPath: m_LocalRotation.x
@@ -17560,7 +17568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8404750078514931655, guid: 12f0e765147988e478ca058dfa83d6f5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.999449
+      value: -0.99945176
       objectReference: {fileID: 0}
     - target: {fileID: 8404750078514931655, guid: 12f0e765147988e478ca058dfa83d6f5, type: 3}
       propertyPath: m_LocalRotation.z
@@ -19853,6 +19861,10 @@ PrefabInstance:
       value: SM_Prop_Bench_Seat_01 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_LocalPosition.x
       value: 84
       objectReference: {fileID: 0}
@@ -21082,6 +21094,10 @@ PrefabInstance:
     - target: {fileID: 1728377491344570331, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Bench_Seat_01 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22658,7 +22674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120496226152766396, guid: 2faa264310a51294dbb5f32fa64b9da3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.63
+      value: -1.614
       objectReference: {fileID: 0}
     - target: {fileID: 9120496226152766396, guid: 2faa264310a51294dbb5f32fa64b9da3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -48387,6 +48403,10 @@ PrefabInstance:
       value: SM_Prop_Bench_Seat_01
       objectReference: {fileID: 0}
     - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_LocalPosition.x
       value: 74
       objectReference: {fileID: 0}
@@ -49316,7 +49336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1288712995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50808,6 +50828,10 @@ PrefabInstance:
     - target: {fileID: 1728377491344570331, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Bench_Seat_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_LocalPosition.x
@@ -59329,11 +59353,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3435742092176600197, guid: 3b81b6a4e487b464f9d6524653945ac6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.63
+      value: -1.614
       objectReference: {fileID: 0}
     - target: {fileID: 3435742092176600197, guid: 3b81b6a4e487b464f9d6524653945ac6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.65
+      value: -27.707
       objectReference: {fileID: 0}
     - target: {fileID: 3435742092176600197, guid: 3b81b6a4e487b464f9d6524653945ac6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -60985,6 +61009,10 @@ PrefabInstance:
       value: SM_Prop_Bench_Seat_01 (4)
       objectReference: {fileID: 0}
     - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_LocalPosition.x
       value: 94
       objectReference: {fileID: 0}
@@ -61180,6 +61208,10 @@ PrefabInstance:
     - target: {fileID: 1728377491344570331, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Bench_Seat_01 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_LocalPosition.x
@@ -73715,6 +73747,10 @@ PrefabInstance:
       value: SM_Prop_Bench_Seat_01 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_LocalPosition.x
       value: 84
       objectReference: {fileID: 0}
@@ -77150,6 +77186,10 @@ PrefabInstance:
     - target: {fileID: 1728377491344570331, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Bench_Seat_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_LocalPosition.x
@@ -80683,6 +80723,10 @@ PrefabInstance:
       value: SM_Prop_Bench_Seat_01 (7)
       objectReference: {fileID: 0}
     - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_LocalPosition.x
       value: 104
       objectReference: {fileID: 0}
@@ -82198,6 +82242,10 @@ PrefabInstance:
     - target: {fileID: 1728377491344570331, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Bench_Seat_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 2069332042238127457, guid: 2e3a97d8d0d027a479e2bcda0b366055, type: 3}
       propertyPath: m_LocalPosition.x
